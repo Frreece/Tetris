@@ -30,3 +30,7 @@ Right Arrow: Move Tetrimino right
 Down Arrow: Move Tetrimino down
 
 Up Arrow: Rotate Tetrimino clockwise
+
+Spacebar: Instantly drop Tetrimino
+
+Escape: Quit game
