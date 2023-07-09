@@ -15,7 +15,7 @@ pip install pygame
 Run the game by executing the following command:
 
 ```
-python tetris.py
+python main.py
 ```
 Use the arrow keys to move the Tetriminos (the falling blocks) left, right, or down. Press the up arrow key to rotate the Tetrimino clockwise.
 
