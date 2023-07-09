@@ -302,6 +302,7 @@ def main():
                 run = False
                 pygame.display.quit()
                 quit()
+                
  
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
@@ -324,12 +325,13 @@ def main():
                     current_piece.y += 1
                     if not valid_space(current_piece, grid):
                         current_piece.y -= 1
- 
-                '''if event.key == pygame.K_SPACE:
-                   while valid_space(current_piece, grid):
-                       current_piece.y += 1
-                   current_piece.y -= 1
-                   print(convert_shape_format(current_piece))'''  # todo fix
+                if event.key == pygame.K_SPACE:
+                    while(valid_space(current_piece, grid)):
+                        current_piece.y += 1
+                    if not valid_space(current_piece, grid):
+                        current_piece.y -= 1
+                if event.key == pygame.K_ESCAPE:
+                    run = False
  
         shape_pos = convert_shape_format(current_piece)
  
@@ -371,7 +373,7 @@ def main_menu():
         draw_text_middle('Press any key to begin.', 60, (255, 255, 255), win)
         pygame.display.update()
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+            if event.type == pygame.K_ESCAPE:
                 run = False
  
             if event.type == pygame.KEYDOWN:
@@ -382,4 +384,4 @@ def main_menu():
 win = pygame.display.set_mode((s_width, s_height))
 pygame.display.set_caption('Tetris')
  
-main_menu()
+main_menu()  # start game
